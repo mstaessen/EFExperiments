@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.ChangeTrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.PrivateMembers", "EFExperiments.PrivateMembers\EFExperiments.PrivateMembers.csproj", "{86056D94-647E-4D04-A279-A1E62F70DCDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.CustomMigrationHistoryTable", "EFExperiments.CustomHistoryContext\EFExperiments.CustomMigrationHistoryTable.csproj", "{4029905E-A2BB-48FC-BD4E-F54F780A129E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.ConservationOfOrder", "EFExperiments.ConservationOfOrder\EFExperiments.ConservationOfOrder.csproj", "{CA5237DC-3C04-46FA-9AC4-1C07BA2D2A41}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{86056D94-647E-4D04-A279-A1E62F70DCDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86056D94-647E-4D04-A279-A1E62F70DCDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86056D94-647E-4D04-A279-A1E62F70DCDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4029905E-A2BB-48FC-BD4E-F54F780A129E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4029905E-A2BB-48FC-BD4E-F54F780A129E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4029905E-A2BB-48FC-BD4E-F54F780A129E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4029905E-A2BB-48FC-BD4E-F54F780A129E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA5237DC-3C04-46FA-9AC4-1C07BA2D2A41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA5237DC-3C04-46FA-9AC4-1C07BA2D2A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA5237DC-3C04-46FA-9AC4-1C07BA2D2A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA5237DC-3C04-46FA-9AC4-1C07BA2D2A41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
