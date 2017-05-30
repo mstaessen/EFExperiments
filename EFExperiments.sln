@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.Logging", "EF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.CustomRowVersion", "EFExperiments.CustomRowVersion\EFExperiments.CustomRowVersion.csproj", "{A7A2741E-9DB8-4D81-BCD2-9552A2A150CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.CustomMigrations", "EFExperiments.CustomMigrations\EFExperiments.CustomMigrations.csproj", "{14337DA4-5098-483A-A16D-01BC93448D07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{A7A2741E-9DB8-4D81-BCD2-9552A2A150CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7A2741E-9DB8-4D81-BCD2-9552A2A150CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7A2741E-9DB8-4D81-BCD2-9552A2A150CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14337DA4-5098-483A-A16D-01BC93448D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14337DA4-5098-483A-A16D-01BC93448D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14337DA4-5098-483A-A16D-01BC93448D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14337DA4-5098-483A-A16D-01BC93448D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
