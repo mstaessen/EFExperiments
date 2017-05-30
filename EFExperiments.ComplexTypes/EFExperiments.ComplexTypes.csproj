@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4029905E-A2BB-48FC-BD4E-F54F780A129E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{EE816D97-C18E-4E1C-91BD-BDA105A20712}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>EFExperiments.CustomMigrationHistoryTable</RootNamespace>
-    <AssemblyName>EFExperiments.CustomMigrationHistoryTable</AssemblyName>
+    <RootNamespace>EFExperiments.ComplexTypes</RootNamespace>
+    <AssemblyName>EFExperiments.ComplexTypes</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -68,24 +65,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CustomMigrationHistoryTableContext.cs" />
-    <Compile Include="Migrations\201702281010500_InitialSchema.cs" />
-    <Compile Include="Migrations\201702281010500_InitialSchema.Designer.cs">
-      <DependentUpon>201702281010500_InitialSchema.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ComplexTypeFacts.cs" />
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Product.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702281010500_InitialSchema.resx">
-      <DependentUpon>201702281010500_InitialSchema.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
