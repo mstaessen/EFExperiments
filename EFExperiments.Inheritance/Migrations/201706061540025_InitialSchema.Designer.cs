@@ -13,7 +13,7 @@ namespace EFExperiments.Inheritance.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201702271030134_InitialSchema"; }
+            get { return "201706061540025_InitialSchema"; }
         }
         
         string IMigrationMetadata.Source

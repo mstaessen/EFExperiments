@@ -6,18 +6,30 @@ namespace EFExperiments.Inheritance
     {
         internal const string SchemaName = "Inheritance";
 
-        public DbSet<HierarchyRoot> HierarchyRoots { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.HasDefaultSchema(SchemaName);
 
-            modelBuilder.Entity<HierarchyRoot>().ToTable("root");
-            modelBuilder.Entity<HierarchyIntermediate>().ToTable("intermediate");
-            modelBuilder.Entity<LeafType1>().ToTable("leaf1");
-            modelBuilder.Entity<LeafType2>().ToTable("leaf2");
-            modelBuilder.Entity<LeafType3>().ToTable("leaf3");
+            // Table-per-hierarchy (TPH) -- default
+            // hierarchy is merged into a single table. Best performance, but generally sparse table.
+            modelBuilder.Entity<TphRoot>().ToTable("tph_root");
+
+            // Table-per-type (TPT)
+            // every type in the hierarchy gets its own table. This could hurt performance.
+            modelBuilder.Entity<TptRoot>().ToTable("tpt_root");
+            modelBuilder.Entity<TptIntermediate>().ToTable("tpt_intermediate");
+            modelBuilder.Entity<TptLeafType1>().ToTable("tpt_leaf1");
+            modelBuilder.Entity<TptLeafType2>().ToTable("tpt_leaf2");
+            modelBuilder.Entity<TptLeafType3>().ToTable("tpt_leaf3");
+
+            // Table-per-class (table-per-concrete-type) (TPC)
+            // 
+            modelBuilder.Entity<TpcRoot>();
+            modelBuilder.Entity<TpcIntermediate>();
+            modelBuilder.Entity<TpcLeafType1>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf1"));
+            modelBuilder.Entity<TpcLeafType2>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf2"));
+            modelBuilder.Entity<TpcLeafType3>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf3"));
         }
     }
 }

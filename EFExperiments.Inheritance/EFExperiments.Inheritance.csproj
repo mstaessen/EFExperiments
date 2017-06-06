@@ -71,17 +71,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HierarchyRoot.cs" />
-    <Compile Include="InheritanceMappingFacts.cs" />
-    <Compile Include="HierarchyIntermediate.cs" />
-    <Compile Include="LeafType1.cs" />
-    <Compile Include="LeafType2.cs" />
-    <Compile Include="LeafType3.cs" />
-    <Compile Include="InheritanceContext.cs" />
-    <Compile Include="Migrations\201702271030134_InitialSchema.cs" />
-    <Compile Include="Migrations\201702271030134_InitialSchema.Designer.cs">
-      <DependentUpon>201702271030134_InitialSchema.cs</DependentUpon>
+    <Compile Include="Migrations\201706061540025_InitialSchema.cs" />
+    <Compile Include="Migrations\201706061540025_InitialSchema.Designer.cs">
+      <DependentUpon>201706061540025_InitialSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="TpcFacts.cs" />
+    <Compile Include="TphFacts.cs" />
+    <Compile Include="TptFacts.cs" />
+    <Compile Include="TphHierarchy.cs" />
+    <Compile Include="TpcHierarchy.cs" />
+    <Compile Include="TptHierarchy.cs" />
+    <Compile Include="InheritanceContext.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -90,8 +90,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201702271030134_InitialSchema.resx">
-      <DependentUpon>201702271030134_InitialSchema.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706061540025_InitialSchema.resx">
+      <DependentUpon>201706061540025_InitialSchema.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
