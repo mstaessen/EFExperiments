@@ -14,6 +14,9 @@ namespace EFExperiments.Inheritance
             // Table-per-hierarchy (TPH) -- default
             // hierarchy is merged into a single table. Best performance, but generally sparse table.
             modelBuilder.Entity<TphRoot>().ToTable("tph_root");
+//            modelBuilder.Entity<TphLeafType1>().Map(m => m.Requires("Discriminator").HasValue("L1"));
+//            modelBuilder.Entity<TphLeafType2>().Map(m => m.Requires("Discriminator").HasValue("L2"));
+//            modelBuilder.Entity<TphLeafType3>().Map(m => m.Requires("Discriminator").HasValue("L3"));
 
             // Table-per-type (TPT)
             // every type in the hierarchy gets its own table. This could hurt performance.
@@ -25,11 +28,20 @@ namespace EFExperiments.Inheritance
 
             // Table-per-class (table-per-concrete-type) (TPC)
             // 
-            modelBuilder.Entity<TpcRoot>();
+            modelBuilder.Entity<TpcRoot>().HasMany(x => x.AlternateIdentifiers).WithRequired();
             modelBuilder.Entity<TpcIntermediate>();
-            modelBuilder.Entity<TpcLeafType1>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf1"));
-            modelBuilder.Entity<TpcLeafType2>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf2"));
-            modelBuilder.Entity<TpcLeafType3>().Map(m => m.MapInheritedProperties().ToTable("tpc_leaf3"));
+            modelBuilder.Entity<TpcLeafType1>().Map(m => {
+                m.MapInheritedProperties().ToTable("tpc_leaf1");
+                m.Requires("Discriminator").HasValue("L1");
+            });
+            modelBuilder.Entity<TpcLeafType2>().Map(m => {
+                m.MapInheritedProperties().ToTable("tpc_leaf2");
+                m.Requires("Discriminator").HasValue("L2");
+            });
+            modelBuilder.Entity<TpcLeafType3>().Map(m => {
+                m.MapInheritedProperties().ToTable("tpc_leaf3");
+                m.Requires("Discriminator").HasValue("L3");
+            });
         }
     }
 }

@@ -1,15 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EFExperiments.Inheritance
 {
+    public class AlternateTptIdentifier
+    {
+        public long Id { get; set; }
+
+        public string Identifier { get; set; }
+    }
+
     public abstract class TptRoot
     {
         public Guid Id { get; protected set; }
 
         public string RootProperty { get; set; }
+
+        public virtual ICollection<AlternateTptIdentifier> AlternateIdentifiers { get; set; }
     }
 
-    public class TptIntermediate : TptRoot
+    public abstract class TptIntermediate : TptRoot
     {
         public string IntermediateProperty { get; set; }
     }

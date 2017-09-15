@@ -75,6 +75,26 @@
     <Compile Include="Migrations\201706061540025_InitialSchema.Designer.cs">
       <DependentUpon>201706061540025_InitialSchema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706061547047_AddAlternateIdentifiersOnTpcHierarchy.cs" />
+    <Compile Include="Migrations\201706061547047_AddAlternateIdentifiersOnTpcHierarchy.Designer.cs">
+      <DependentUpon>201706061547047_AddAlternateIdentifiersOnTpcHierarchy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061557574_AddDiscriminatorsToTpc.cs" />
+    <Compile Include="Migrations\201706061557574_AddDiscriminatorsToTpc.Designer.cs">
+      <DependentUpon>201706061557574_AddDiscriminatorsToTpc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061605063_AddDiscriminatorsToTph.cs" />
+    <Compile Include="Migrations\201706061605063_AddDiscriminatorsToTph.Designer.cs">
+      <DependentUpon>201706061605063_AddDiscriminatorsToTph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061607502_RemovedDiscriminatorFromTph.cs" />
+    <Compile Include="Migrations\201706061607502_RemovedDiscriminatorFromTph.Designer.cs">
+      <DependentUpon>201706061607502_RemovedDiscriminatorFromTph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706061618282_AddTptIdentifiers.cs" />
+    <Compile Include="Migrations\201706061618282_AddTptIdentifiers.Designer.cs">
+      <DependentUpon>201706061618282_AddTptIdentifiers.cs</DependentUpon>
+    </Compile>
     <Compile Include="TpcFacts.cs" />
     <Compile Include="TphFacts.cs" />
     <Compile Include="TptFacts.cs" />
@@ -92,6 +112,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201706061540025_InitialSchema.resx">
       <DependentUpon>201706061540025_InitialSchema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061547047_AddAlternateIdentifiersOnTpcHierarchy.resx">
+      <DependentUpon>201706061547047_AddAlternateIdentifiersOnTpcHierarchy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061557574_AddDiscriminatorsToTpc.resx">
+      <DependentUpon>201706061557574_AddDiscriminatorsToTpc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061605063_AddDiscriminatorsToTph.resx">
+      <DependentUpon>201706061605063_AddDiscriminatorsToTph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061607502_RemovedDiscriminatorFromTph.resx">
+      <DependentUpon>201706061607502_RemovedDiscriminatorFromTph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706061618282_AddTptIdentifiers.resx">
+      <DependentUpon>201706061618282_AddTptIdentifiers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.ExtensionMethodMapping", "EFExperiments.ExtensionMethodMapping\EFExperiments.ExtensionMethodMapping.csproj", "{38C56901-9E09-4727-AAB0-D2675A2CE259}"
 EndProject
@@ -32,6 +32,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.CustomRowVersion", "EFExperiments.CustomRowVersion\EFExperiments.CustomRowVersion.csproj", "{A7A2741E-9DB8-4D81-BCD2-9552A2A150CC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.CustomMigrations", "EFExperiments.CustomMigrations\EFExperiments.CustomMigrations.csproj", "{14337DA4-5098-483A-A16D-01BC93448D07}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFExperiments.Sequences", "EFExperiments.Sequences\EFExperiments.Sequences.csproj", "{D1DDA002-DFB7-4DD9-B791-6E00F94BF020}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{14337DA4-5098-483A-A16D-01BC93448D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14337DA4-5098-483A-A16D-01BC93448D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14337DA4-5098-483A-A16D-01BC93448D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1DDA002-DFB7-4DD9-B791-6E00F94BF020}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1DDA002-DFB7-4DD9-B791-6E00F94BF020}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1DDA002-DFB7-4DD9-B791-6E00F94BF020}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1DDA002-DFB7-4DD9-B791-6E00F94BF020}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -54,5 +54,19 @@ namespace EFExperiments.Inheritance
                 Assert.DoesNotContain("tpt_leaf3", sql);
             }
         }
+
+        [Fact]
+        public void QueriesOnAlternateIdentifier()
+        {
+            using (var context = new InheritanceContext()) {
+                var query = context.Set<TptRoot>().Where(x => x.AlternateIdentifiers.Any(y => y.Identifier == "SomeIdentifier"));
+                var sql = query.ToString();
+                Assert.Contains("tpt_root", sql);
+                Assert.Contains("tpt_intermediate", sql);
+                Assert.Contains("tpt_leaf1", sql);
+                Assert.Contains("tpt_leaf2", sql);
+                Assert.Contains("tpt_leaf3", sql);
+            }
+        }
     }
 }

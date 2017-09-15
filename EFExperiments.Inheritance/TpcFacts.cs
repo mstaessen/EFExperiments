@@ -40,13 +40,24 @@ namespace EFExperiments.Inheritance
         [Fact]
         public void QueriesOnIntermediateTypeIncludesChildTablesAndUp()
         {
-            using (var context = new InheritanceContext())
-            {
+            using (var context = new InheritanceContext()) {
                 var query = context.Set<TpcIntermediate>().Where(x => x.Id == Guid.Empty);
                 var sql = query.ToString();
                 Assert.Contains("tpc_leaf1", sql);
                 Assert.Contains("tpc_leaf2", sql);
                 Assert.DoesNotContain("tpc_leaf3", sql);
+            }
+        }
+
+        [Fact]
+        public void QueriesOnAlternateIdentifier()
+        {
+            using (var context = new InheritanceContext()) {
+                var query = context.Set<TpcRoot>().Where(x => x.AlternateIdentifiers.Any(y => y.Identifier == "SomeIdentifier"));
+                var sql = query.ToString();
+                Assert.Contains("tpc_leaf1", sql);
+                Assert.Contains("tpc_leaf2", sql);
+                Assert.Contains("tpc_leaf3", sql);
             }
         }
     }
